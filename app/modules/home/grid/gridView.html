@@ -1,0 +1,12 @@
+<div class = 'right'>
+       <!--<div ng-repeat = 'promo in grid.data'>
+            <span>{{ promo.id }}</span>  <span>{{ promo.name }}</span>
+       </div>-->
+    <ul>
+        <li dir-paginate="promo in grid.data | itemsPerPage: grid.rowsPerPage" total-items="grid.totalRows" >
+                <span>{{ promo.id }}</span>  <span>{{ promo.name }}</span>
+        </li>
+    </ul>
+
+    <dir-pagination-controls on-page-change = "grid.pageChanged(newPageNumber)"></dir-pagination-controls>
+</div>
